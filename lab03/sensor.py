@@ -13,5 +13,9 @@ for i in range(n):
         mx=x
     avgsum+=x
     avgk+=1
-
+print(n)
+print(ke)
+print(kl)
+print(f'{mx:.1f}')
+print(f'{avgsum/avgk:.1f}')
     
