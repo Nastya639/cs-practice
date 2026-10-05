@@ -1,6 +1,6 @@
 limit=float(input())
 n=int(input())
-ke,kl,mx,avgsum,avgk=0,0,0,0,0
+ke,kl,mx,avgsum,avgk=0,0,float('-inf'),0,0
 for i in range(n):
     x=input()
     if x=='error':
