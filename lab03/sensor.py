@@ -16,9 +16,9 @@ for i in range(n):
 print(n)
 print(ke)
 print(kl)
+print(f'{mx:.1f}')
 if avgk>0:
-    print(f'{mx:.1f}')
+    print(f'{avgsum/avgk:.1f}')
 else:
     print(False)
-print(f'{avgsum/avgk:.1f}')
     
