@@ -1,6 +1,3 @@
-names=input('Введите имена через пробел: ').split()
-scores=[float(x) for x in input('Введите баллы через пробел: ').split()]
-
 def winner(names: list[str], scores: list[float]) -> str:
     TheBest=float('-inf')
     name=''
