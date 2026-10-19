@@ -10,6 +10,15 @@ def read_rows(lines: list[str]) -> list[dict]:
         row_dict=dict(zip(headers,values))
         rows.append(row_dict)
     return rows
+def count_types(rows: list[dict]) -> dict:
+    counts={}
+    for row in rows:
+        type_value=row.get('тип')
+        if type_value not in counts:
+            counts[type_value]=1
+        else:
+            counts[type_value]+=1
+    return counts
 
 
 
