@@ -1,4 +1,4 @@
-def read_rows(lines: list[str]) -> list[dict]:
+def read_rows(lines):
     if not lines:
         return []
     headers=lines[0].strip().split(',')
@@ -10,7 +10,7 @@ def read_rows(lines: list[str]) -> list[dict]:
         row_dict=dict(zip(headers,values))
         rows.append(row_dict)
     return rows
-def count_types(rows: list[dict]) -> dict:
+def count_types(rows):
     counts={}
     for row in rows:
         type_value=row.get('тип')
@@ -19,7 +19,7 @@ def count_types(rows: list[dict]) -> dict:
         else:
             counts[type_value]+=1
     return counts
-def total_minutes(rows: list[dict], kind:str) -> float:
+def total_minutes(rows, kind):
     total=0.0
     for row in rows:
         minutes=row.get('минуты')
@@ -29,7 +29,7 @@ def total_minutes(rows: list[dict], kind:str) -> float:
             except:
                 continue
     return round(total,1)
-def to_csv(counts: dict) -> str:
+def to_csv(counts):
     result='тип,количество\n'
     sorted_counts=sorted(counts.keys())
     for type_value in sorted_counts:
