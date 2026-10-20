@@ -1,7 +1,7 @@
 from tablestats import *
 def main():
     path=input().strip()
-    with open(path,encoding='utg-8') as table:
+    with open(path,encoding='utf-8') as table:
         lines=table.readlines()
         rows=read_rows(lines)
     counts=count_types(rows)
