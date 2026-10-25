@@ -9,7 +9,7 @@ def read_rows(lines):
         if headers is None:
             headers=values
             continue
-        if len(values)!=len(values):
+        if len(values)!=len(headers):
             continue
         row_dict=dict(zip(headers,values))
         rows.append(row_dict)
@@ -31,7 +31,7 @@ def total_minutes(rows, kind):
             if minutes is not None:
                 try:
                     total+=float(minutes)
-                except ValueError:
+                except (ValueError,TypeError):
                     continue
     return round(total,1)
 def to_csv(counts):
