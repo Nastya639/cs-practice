@@ -26,12 +26,10 @@ def count_types(rows):
 def total_minutes(rows, kind):
     total=0.0
     for row in rows:
-        row_kind = str(row.get('тип')).strip().lower()
-        if row_kind.get('тип')==kind:
+        if row.get('тип')==kind:
             minutes=row.get('минуты')
             try:
-                minutes_clean = str(minutes).replace(',', '.').strip()
-                total+=float(minutes_clean)
+                total+=float(str(minutes).replace(',', '.'))
             except (ValueError,TypeError):
                 continue
     return round(total,1)
