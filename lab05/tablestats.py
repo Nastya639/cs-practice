@@ -28,11 +28,10 @@ def total_minutes(rows, kind):
     for row in rows:
         if row.get('тип')==kind:
             minutes=row.get('минуты')
-            if minutes is not None:
-                try:
-                    total+=float(minutes)
-                except (ValueError,TypeError):
-                    continue
+            try:
+                total+=float(minutes)
+            except (ValueError,TypeError):
+                continue
     return round(total,1)
 def to_csv(counts):
     result='тип,количество\n'
