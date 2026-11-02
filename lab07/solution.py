@@ -12,3 +12,10 @@ def block(matrix, rows, columns):
     grid=np.ix_(rows,columns)
     sub_matrix=arr[grid]
     return sub_matrix.tolist()
+def column_means(matrix):
+    if not matrix or not matrix[0]:
+        return []
+    arr=np.asarray(matrix)
+    means=arr.mean(axis=0)
+    rounded_means=np.round(means,6)
+    return rounded_means.tolist()
