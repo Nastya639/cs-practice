@@ -19,3 +19,10 @@ def column_means(matrix):
     means=arr.mean(axis=0)
     rounded_means=np.round(means,6)
     return rounded_means.tolist()
+def column_range(matrix, column):
+    if not matrix or not matrix[0]:
+        return 0.0
+    arr=np.asarray(matrix)
+    col=arr[:,column]
+    scope=col.max()-col.min()
+    return float(round(scope,6))
