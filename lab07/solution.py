@@ -26,3 +26,11 @@ def column_range(matrix, column):
     col=arr[:,column]
     scope=col.max()-col.min()
     return float(round(scope,6))
+
+test_matrix=[[1,2,3],[4,5,6],[7,8,9]]
+test_values=[10,20,30,40,50,60]
+if __name__=="__main__":
+    print('reshape_rows: ', reshape_rows(test_values,3))
+    print('block: ', block(test_matrix,[0,2],[1]))
+    print('column_means: ', column_means(test_matrix))
+    print('column_range: ', column_range(test_matrix,2))
