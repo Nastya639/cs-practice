@@ -44,3 +44,25 @@ print("Последние 2 строки: ", matrix[-2:], matrix[-2:].shape)
 print("Первые 2 столбца: ", matrix[:,:2], matrix[:,:2].shape)
 print("Фрагмент из строк с индексами 1–3 и столбцов 2–4: ", matrix[1:4, 2:5], matrix[1:4, 2:5].shape)
 print("Угловой блок 2×2 в правом нижнем углу: ", matrix[3:5, 3:5], matrix[3:5, 3:5].shape)
+
+##задание 5
+vector = np.array([10, 20, 30, 40, 50])
+vector[1:4] = 0
+
+small_matrix = np.arange(1, 10).reshape(3, 3)
+small_matrix[0, :] = -1
+small_matrix[1:, 1:] = 9
+
+changed_hours = hours.copy()
+print()
+print("Задание 5")
+changed_hours[2:5]=99
+changed_hours[1::2]=-1
+print("Измененный массив: ", changed_hours, "Исходный массив: ", hours)
+# Объяснение: метод .copy() необходим, потому что срезы в NumPy возвращают представление (view)
+# исходного массива, а не копию. Без .copy() изменения в changed_hours перезаписали бы данные в hours.
+changed_matrix = matrix.copy()
+changed_matrix[1, :] = 0
+changed_matrix[:, -1] = -1     
+changed_matrix[1:4, 1:4] = 100
+print("Измененная матрица: ", changed_matrix, "Исходная матрица: ", matrix)
