@@ -17,3 +17,20 @@ print("Последний элемент: ", hours[-1])
 print("Элементы с индексами 2 - 5: ", hours[2:6])
 print("Каждый второй элемент: ", hours[::2])
 print("Массив в обратном порядке: ", hours[::-1])
+
+##задание 3
+temperatures = np.array([
+    [12, 14, 13, 15],
+    [11, 13, 16, 17],
+    [10, 12, 15, 18],
+])
+print()
+print("Задание 3")
+print("Форма массива: ", temperatures.shape)
+print("Число измерений: ", temperatures.ndim)
+print("Число измерений: ", temperatures.ndim)
+print("Значение из второй строки и третьего столбца: ", temperatures[1,2])
+print("Первая строка: ", temperatures[0])
+print("Последний столбец: ", temperatures[:, -1])
+print("Первые две строки без первого столбца: ", temperatures[:2, 1:4])
+print("Центральный фрагмент 2×2: ", temperatures[:2,1:3])
