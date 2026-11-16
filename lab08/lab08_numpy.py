@@ -34,3 +34,13 @@ print("Первая строка: ", temperatures[0])
 print("Последний столбец: ", temperatures[:, -1])
 print("Первые две строки без первого столбца: ", temperatures[:2, 1:4])
 print("Центральный фрагмент 2×2: ", temperatures[:2,1:3])
+
+##задание 4
+matrix = np.arange(1, 26).reshape(5, 5)
+print()
+print("Задание 4")
+print("Первые 3 строки: ", matrix[:3], matrix[:3].shape)
+print("Последние 2 строки: ", matrix[-2:], matrix[-2:].shape)
+print("Первые 2 столбца: ", matrix[:,:2], matrix[:,:2].shape)
+print("Фрагмент из строк с индексами 1–3 и столбцов 2–4: ", matrix[1:4, 2:5], matrix[1:4, 2:5].shape)
+print("Угловой блок 2×2 в правом нижнем углу: ", matrix[3:5, 3:5], matrix[3:5, 3:5].shape)
