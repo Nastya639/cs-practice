@@ -66,3 +66,13 @@ changed_matrix[1, :] = 0
 changed_matrix[:, -1] = -1     
 changed_matrix[1:4, 1:4] = 100
 print("Измененная матрица: ", changed_matrix, "Исходная матрица: ", matrix)
+
+###задание 6
+print()
+print("Задание 6")
+numbers = np.arange(12)
+table = numbers.reshape(3, 4) ## reshape(5,3) вызовет ошибку, потому что 12 элементов не хватает для заполнения матрицы размером 5*3
+transposed = table.T
+print('Номера от 0 до 11:\n', numbers)
+print('Исходная таблица:\n', table)
+print('Транспонированная таблица:\n', transposed)
