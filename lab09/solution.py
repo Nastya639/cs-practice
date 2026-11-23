@@ -11,3 +11,8 @@ def vector_report(values):
         'Развернутый вектор': a[::-1]
     }
     return b
+def change_vector(values):
+    a=np.asarray(values).copy()
+    a[2:5]=99
+    a[::2]=-1
+    return a.tolist()
