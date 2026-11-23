@@ -16,3 +16,8 @@ def change_vector(values):
     a[2:5]=99
     a[::2]=-1
     return a.tolist()
+def cap_above(values, limit):
+    a=np.asarray(values).copy()
+    mask = a > limit
+    a[mask] = limit
+    return a.tolist()
