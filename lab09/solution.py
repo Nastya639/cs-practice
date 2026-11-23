@@ -21,3 +21,7 @@ def cap_above(values, limit):
     mask = a > limit
     a[mask] = limit
     return a.tolist()
+def celsius_to_fahrenheit(values):
+    a=np.asarray(values).copy()
+    a = (a * 9/5) + 32
+    return a.tolist()
